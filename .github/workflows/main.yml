@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: KjellGeerts/tableau_workbook@v4
+        uses: KjellGeerts/tableau_workbook@main
         with:
           who-to-greet: 'Kjell'
       # Use the output from the `hello` step
