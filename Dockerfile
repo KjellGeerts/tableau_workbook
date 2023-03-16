@@ -7,6 +7,6 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 RUN pip install tabcmd
 
 COPY entrypoint.sh /entrypoint.sh
-COPY yelp_analyses.twb /yelp_analyses.twb
+COPY workbooks/yelp_analyses.twb /yelp_analyses.twb
 
 ENTRYPOINT ["/entrypoint.sh"]
