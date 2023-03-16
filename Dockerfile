@@ -1,8 +1,12 @@
-# Container image that runs your code
-FROM alpine:3.10
+FROM alpine:3.17.2
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
+RUN pip install tabcmd
+
 COPY entrypoint.sh /entrypoint.sh
+COPY yelp_analyses.twb /yelp_analyses.twb
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
