@@ -4,9 +4,8 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: Publishing Tableau Workbook
+    secrets: ${{ secrets.TOKEN_VALUE }}
     steps:
       - name: Building runner
         id: tableau_publish
         uses: KjellGeerts/tableau_workbook@main
-        secrets:
-          accessToken: ${{ secrets.TOKEN_VALUE }}
