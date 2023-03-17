@@ -4,5 +4,3 @@ description: 'publish workbook on Tableau Server'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ secrets.TOKEN_VALUE }}
