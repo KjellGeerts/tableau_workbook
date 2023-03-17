@@ -1,6 +1,7 @@
 FROM alpine:3.17.2
 
 ENV PYTHONUNBUFFERED=1
+RUN python3 -m ensurepip
 RUN pip3 install
 RUN pip install tabcmd
 
