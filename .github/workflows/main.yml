@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Publishing Tableau Workbook
     steps:
-      - name: Building runner
+      - name: Publishing workbook
         id: runner
         uses: KjellGeerts/tableau_workbook@main
