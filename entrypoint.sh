@@ -1,7 +1,18 @@
-#!/bin/sh -l
+#!/bin/sh
 
-cd /
+echo "Workbook Directory : $1"
+echo "Environment : $2"
+echo "Repo Token : $3"
 
-tabcmd login --server https://dub01.online.tableau.com --site biztorybenelux --token-name publish_token --token-value 
-tabcmd publish "yelp_analyses.twb" -n "Yelp Analyses" -r "Sandbox" --db-username "" --db-password "" --save-db-password -o
-tabcmd logout
+cp -r /action/* /github/workspace/
+
+python main.py --workbook_dir=$1 --env=$2 --repo_token=$3
+
+exit_status=$?
+if [ "${exit_status}" -ne 0 ];
+then
+    echo "exit ${exit_status}"
+    exit 1
+fi
+# echo "EXIT 0"
+exit 0
