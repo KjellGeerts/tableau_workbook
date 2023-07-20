@@ -4,3 +4,4 @@
 *.log
 tabcmd.log
 secrets
+.env

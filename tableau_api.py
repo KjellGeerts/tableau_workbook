@@ -119,4 +119,4 @@ def content_migration(workbook_name, environment):
 
         TableauApi.remove_temp_folder()
 
-content_migration('accounting_workbook', '')
+content_migration('accounting_workbook', 'dev')
