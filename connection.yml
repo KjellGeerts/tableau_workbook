@@ -1,0 +1,20 @@
+connection:
+  server:
+    dev: az65840.west-europe.azure.snowflakecomputing.com
+    uat: az65840.west-europe.azure.snowflakecomputing.com
+    prod: az65840.west-europe.azure.snowflakecomputing.com
+
+  database:
+    dev: DEVELOPMENT
+    uat: PRE-PRODUCTION
+    prod: PRODUCTION
+  
+  schema:
+    dev: DBT_KJELLGEERTS_REPORTING
+    uat: __REPORTING
+    prod: __REPORTING
+  
+  username:
+    dev: kjellgeerts
+    uat: kjellgeerts
+    prod: kjellgeerts

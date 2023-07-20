@@ -3,3 +3,5 @@
 *.tdsx
 *.log
 tabcmd.log
+secrets
+.env
